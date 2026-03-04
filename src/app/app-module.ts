@@ -8,7 +8,8 @@ import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
 import { Product } from './components/product/product';
 import { Title } from './components/title/title';
-import { CoolInput } from './directives/cool-input';
+import CoolInput from './directives/cool-input';
+import { IsChicken } from './directives/is-chicken';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CoolInput } from './directives/cool-input';
     Footer,
     Product,
     Title,
-    CoolInput
+    CoolInput,
+    IsChicken
   ],
   imports: [
     BrowserModule,
