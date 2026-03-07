@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CartService} from '../../servises/cart';
 
 @Component({
   selector: 'footer-component',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss',
 })
 export class Footer {
+  constructor(public cartService:CartService) {
+  }
 
 }

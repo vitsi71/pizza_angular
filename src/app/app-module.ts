@@ -13,6 +13,7 @@ import { IsChicken } from './directives/is-chicken';
 import { ChickenDescriptionPipe } from './pipes/chicken-description-pipe';
 import { WordUpperPipe } from './pipes/word-upper-pipe';
 import { ChickenProductsPipe } from './pipes/chicken-products-pipe';
+import {ProductService} from './servises/product';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import { ChickenProductsPipe } from './pipes/chicken-products-pipe';
     FormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay()),
+    // provideBrowserGlobalErrorListeners(),
+    // provideClientHydration(withEventReplay()),
+    ProductService
   ],
   bootstrap: [App,Header,Footer]
 })

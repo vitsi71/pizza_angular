@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import {ProductType} from '../../types/product.type';
 import {Title} from '../title/title';
+import {CartProduct} from '../../servises/cart-product';
 
 
 @Component({
@@ -11,18 +12,11 @@ import {Title} from '../title/title';
   standalone: false,
   templateUrl: './product.html',
   styleUrl: './product.scss',
-  // encapsulation:ViewEncapsulation.None
+ providers:[CartProduct]
 })
 export class Product {
 
   @Input() productChild:ProductType;
-  // get product():ProductType {return this._product; }
-  // set product(param:ProductType) {
-  //   param.title=param.title.toUpperCase();
-  // this._product=param;}
-  //
-  // private _product:ProductType;
-
 
   @Output() addToCardEvent: EventEmitter<string>= new EventEmitter<string>();
 
@@ -33,7 +27,7 @@ export class Product {
   @ViewChild('elem')
   private elem!:ElementRef;  //ElementRef тип элемент ссылка
 
-  constructor() {
+  constructor(public cartProductService:CartProduct) {
     this.productChild={
       image: '',
         title: '',
@@ -43,6 +37,7 @@ export class Product {
   }
   // через экземпляр дочернего компонента
   addProductToCard(){
+    this.cartProductService.count++;
 this.addToCardEvent.emit(this.titleComponent.toUpper());
   }
 }
