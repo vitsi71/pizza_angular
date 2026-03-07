@@ -37,7 +37,8 @@ export class Product {
     this.productChild={
       image: '',
         title: '',
-        description:''
+        description:'',
+      datetime:''
     }
   }
   // через экземпляр дочернего компонента

@@ -1,4 +1,4 @@
-<div class="product" *isChicken="productChild.description ">
+<div class="product">
   <!--  <div *ngIf="productChild.image; then productImgBlock else defaultImgBlock"></div>-->
   @if (productChild.image) {
     <div class="product-image">
@@ -12,11 +12,12 @@
 
 
 
-  <custom-title [title]="productChild.title" #customTitle></custom-title>
+  <custom-title [title]="productChild.title | uppercase" #customTitle></custom-title>
 
-  <div class="product-text">{{ productChild.description }}</div>
+  <div class="product-text">{{ productChild.description | wordUpper:['сыр','томат','гриб']}}</div>
   <div class="product-action" #elem>
     <button class="btn btn-add-to-cart" (click)="addProductToCard()">В корзину</button>
   </div>
+<!--  <div>{{productChild.datetime | date:'full' | uppercase}}</div>-->
 </div>
 

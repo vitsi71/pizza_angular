@@ -2,5 +2,6 @@
 export type ProductType={
   image: string,
   title: string,
-  description:string
+  description:string,
+  datetime:string
 }

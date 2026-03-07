@@ -21,6 +21,9 @@
           "standalone": false
         }
       },
+      "i18n": {
+        "sourceLocale":"ru"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -48,7 +51,10 @@
             },
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "polyfills": [
+              "@angular/localize/init"
+            ]
           },
           "configurations": {
             "production": {

@@ -10,6 +10,9 @@ import { Product } from './components/product/product';
 import { Title } from './components/title/title';
 import CoolInput from './directives/cool-input';
 import { IsChicken } from './directives/is-chicken';
+import { ChickenDescriptionPipe } from './pipes/chicken-description-pipe';
+import { WordUpperPipe } from './pipes/word-upper-pipe';
+import { ChickenProductsPipe } from './pipes/chicken-products-pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { IsChicken } from './directives/is-chicken';
     Product,
     Title,
     CoolInput,
-    IsChicken
+    IsChicken,
+    ChickenDescriptionPipe,
+    WordUpperPipe,
+    ChickenProductsPipe
   ],
   imports: [
     BrowserModule,
