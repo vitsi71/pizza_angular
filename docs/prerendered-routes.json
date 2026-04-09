@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/pizza_angular": {},
+    "/pizza_angular/about": {},
+    "/pizza_angular/order": {},
+    "/pizza_angular/pizza": {},
+    "/pizza_angular/products": {}
+  }
+}
