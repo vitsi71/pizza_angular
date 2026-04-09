@@ -111,7 +111,7 @@ ngOnInit() {
 }
 
   ngAfterViewInit() {
-  this.popup.open();
+  // this.popup.open();
 
     // const modalRef = this.modalService.open(Popup);
     // modalRef.componentInstance.data = 'Main component';
