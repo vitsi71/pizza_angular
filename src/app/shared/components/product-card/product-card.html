@@ -1,0 +1,26 @@
+<div class="product">
+  <!--  <div *ngIf="productChild.image; then productImgBlock else defaultImgBlock"></div>-->
+  @if (productChild.image) {
+    <div class="product-image">
+<!--      <img src="assets/images/product/{{productChild.image}}">-->
+      <img src="{{productChild.image}}">
+    </div>
+  } @else {
+    <div class="product-image">
+      <img src="assets/images/pizzzzza.png">
+    </div>
+  }
+
+
+
+  <custom-title [title]="productChild.title | uppercase" #customTitle></custom-title>
+
+  <div class="product-text">{{ productChild.description | wordUpper:['сыр','томат','гриб']}}</div>
+  <div class="product-action" #elem>
+<!--    <button class="btn btn-add-to-cart" (click)="addProductToCard()">В корзину</button>-->
+    <a class="btn btn-add-to-cart" routerLink="/order" [queryParams]="{product:productChild.title}">В корзину</a>
+    <a class="btn btn-white" [routerLink]="['/products',productChild.id]">Подробнее</a>
+  </div>
+
+</div>
+

@@ -1,0 +1,17 @@
+<section class="products" id="products" >
+  <div class="container">
+    <h2 class="products-title" id="products-title" >Выберите свою любимую пиццу </h2>
+    <div class="products-items">
+
+      @for ( product of products ;track product) {
+<!--        <product-card  [productChild]="product-card" (addToCardEvent)="addToCart($event)"></product-card>-->
+        <product-card [productChild]="product" ></product-card>
+      }
+      @if(loading){
+        <div class="loading-bg">
+          <div class="loader"></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
